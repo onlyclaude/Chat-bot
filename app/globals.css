@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased;
+    /* 모바일 주소창/키보드 대응 */
+    height: 100%;
+    overscroll-behavior-y: none;
+  }
+
+  /* 스크롤바 숨김 (모바일 감성 유지) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
